@@ -1,7 +1,7 @@
 # fvue-ui-lib (unofficial Vue port of `@fanvue/ui`)
 
 Monorepo. Original tracked: `@fanvue/ui@3.43.0` (Apache-2.0).
-Unofficial port, not affiliated with Fanvue. **Nothing is published.**
+Unofficial port, not affiliated with Fanvue.
 
 ## Structure
 
@@ -19,9 +19,9 @@ Unofficial port, not affiliated with Fanvue. **Nothing is published.**
 bun install
 bun run build        # ui (components + theme)
 bun run typecheck
-bun run test         # 94 unit tests
+bun run test         # 98 unit tests
 bun run docs:build
-bun run test:visual  # 87 Playwright screenshots
+bun run test:visual  # 103 Playwright checks (screenshots + axe + keyboard)
 bun run watch:check  # is upstream ahead of snapshots?
 bun run watch:compare 3.42.2 3.43.0
 bun run watch:matrix

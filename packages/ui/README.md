@@ -16,14 +16,13 @@ Vite + Tailwind CSS v4** apps — embedded Fanvue Apps or standalone.
 ## Install
 
 ```sh
-bun add fvue-ui-lib vue tailwindcss reka-ui
-# only if you use them:
-bun add recharts        # charts (bring your own renderer, chrome is included)
-bun add react-day-picker # NOT needed — DatePicker is native
-bun add motion           # NOT needed — animated icons are CSS-driven
+bun add fvue-ui-lib
 ```
 
-Peer dependencies: `vue ^3.5.0`, `tailwindcss ^4.0.0`. Runtime dependency: `reka-ui`.
+Peer dependencies: `vue ^3.5.0`, `tailwindcss ^4.0.0` (Bun installs them automatically).
+Runtime dependency `reka-ui` comes bundled with the install. No other setup packages needed:
+charts ship the chrome — plug in any renderer you like; DatePicker is native;
+animated icons are pure CSS.
 
 ## Tailwind v4 setup
 
@@ -117,7 +116,7 @@ onMounted(() => document.documentElement.classList.add('dark'))
 - DatePicker uses native date inputs (single/range), no calendar grid yet.
 - Charts export the chrome (container/card/legend/tooltip/skeleton) — bring your own renderer.
 - `Logo` is intentionally not ported (trademark).
-- See [divergence report](../../docs/stage-2-divergence.md) for the full list of conscious differences.
+- See [divergence report](https://github.com/toxic-sunflower/fvue-ui-lib/blob/main/docs/stage-2-divergence.md) for the full list of conscious differences.
 
 ## License & attribution
 
