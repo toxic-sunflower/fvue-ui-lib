@@ -20,8 +20,12 @@ jobs:
       - name: version matches tag
         working-directory: packages/ui
         run: test "v$(bun pm pkg get version | tr -d '"')" = "${{ github.ref_name }}"
+      # `npm stage` is only available in recent npm releases
+      - run: npm install -g npm@latest
       - run: npm --version
-      - run: npm publish --access public --provenance
+      # The version is staged, not released: approve it on npmjs.com
+      # (or `npm stage approve <stage-id>`) to publish it.
+      - run: npm stage publish --access public --provenance
         working-directory: packages/ui
       - name: show npm debug log on failure
         if: failure()
