@@ -15,6 +15,7 @@ jobs:
       - run: bun run build
       - run: bun run test
       - name: version matches tag
-        run: test "v$(bun -e 'console.log(require("./packages/ui/package.json").version)')" = "${{ github.ref_name }}"
+        working-directory: packages/ui
+        run: test "v$(bun pm pkg get version)" = "${{ github.ref_name }}"
       - run: bun publish --access public --provenance
         working-directory: packages/ui
