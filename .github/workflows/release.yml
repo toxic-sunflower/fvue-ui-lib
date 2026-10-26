@@ -20,5 +20,9 @@ jobs:
       - name: version matches tag
         working-directory: packages/ui
         run: test "v$(bun pm pkg get version | tr -d '"')" = "${{ github.ref_name }}"
+      - run: npm --version
       - run: npm publish --access public --provenance
         working-directory: packages/ui
+      - name: show npm debug log on failure
+        if: failure()
+        run: cat /home/runner/.npm/_logs/*-debug-*.log | tail -n 60
