@@ -16,6 +16,6 @@ jobs:
       - run: bun run test
       - name: version matches tag
         working-directory: packages/ui
-        run: test "v$(bun pm pkg get version)" = "${{ github.ref_name }}"
+        run: test "v$(bun pm pkg get version | tr -d '"')" = "${{ github.ref_name }}"
       - run: bun publish --access public --provenance
         working-directory: packages/ui
