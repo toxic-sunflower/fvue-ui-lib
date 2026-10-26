@@ -11,29 +11,43 @@ const entries = {
   'animated-icons': resolve(__dirname, 'src/animated-icons.ts'),
 }
 
+const isCjs = process.env.LIB_FORMAT === 'cjs'
+
 export default defineConfig({
   plugins: [
     vue(),
-    dts({
-      outDir: 'dist',
-      entryRoot: 'src',
-      tsconfigPath: resolve(__dirname, 'tsconfig.json'),
-    }),
+    // Types are emitted once (ESM build); CJS reuses them as .d.cts via scripts/build-cjs.mjs.
+    ...(isCjs
+      ? []
+      : [
+          dts({
+            outDir: 'dist',
+            entryRoot: 'src',
+            tsconfigPath: resolve(__dirname, 'tsconfig.json'),
+          }),
+        ]),
   ],
   build: {
     lib: {
       entry: entries,
-      formats: ['es'],
+      formats: [isCjs ? 'cjs' : 'es'],
     },
     rollupOptions: {
       external: ['vue', 'reka-ui', 'clsx', 'tailwind-merge', 'tailwindcss'],
       output: [
-        {
-          format: 'es',
-          dir: 'dist',
-          entryFileNames: '[name].mjs',
-          chunkFileNames: 'chunks/[name]-[hash].mjs',
-        },
+        isCjs
+          ? {
+              format: 'cjs',
+              dir: 'dist/cjs',
+              entryFileNames: '[name].cjs',
+              chunkFileNames: 'chunks/[name]-[hash].cjs',
+            }
+          : {
+              format: 'es',
+              dir: 'dist',
+              entryFileNames: '[name].mjs',
+              chunkFileNames: 'chunks/[name]-[hash].mjs',
+            },
       ],
     },
     sourcemap: true,
