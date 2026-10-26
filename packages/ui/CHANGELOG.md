@@ -1,6 +1,13 @@
 # Changelog
 
-## Unreleased
+## 0.1.1
+
+- Real CJS bundles (`require()` works) instead of ESM copies.
+- Package metadata: repository/homepage/bugs links, LICENSE/NOTICE/README/CHANGELOG included.
+- Clean install story in README (single `bun add`, no React leftovers).
+- Toolchain runs on Bun only (`bunx --bun`), no Node required; theme merged into `fvue-ui-lib`.
+
+## 0.1.0
 
 First public snapshot of the unofficial Vue 3 port, tracking `@fanvue/ui@3.43.0`.
 
