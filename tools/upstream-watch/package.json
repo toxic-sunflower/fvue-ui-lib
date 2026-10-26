@@ -1,0 +1,19 @@
+{
+  "name": "fvue-watch",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "bin": { "watch": "./src/index.ts" },
+  "scripts": {
+    "snapshot": "bun ./src/index.ts snapshot",
+    "compare": "bun ./src/index.ts compare",
+    "matrix": "bun ./src/index.ts matrix",
+    "check": "bun ./src/index.ts check"
+  },
+  "dependencies": {
+    "typescript": "~5.9.3"
+  },
+  "devDependencies": {
+    "@fanvue/ui": "3.43.0"
+  }
+}

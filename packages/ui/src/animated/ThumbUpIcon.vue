@@ -1,0 +1,46 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+import type { IconSize } from '../types'
+
+const props = withDefaults(
+  defineProps<{ size?: IconSize; playing?: boolean; label?: string }>(),
+  { size: 24, playing: false },
+)
+
+const active = ref(false)
+
+function startAnimation() {
+  active.value = false
+  requestAnimationFrame(() => {
+    active.value = true
+  })
+}
+
+function stopAnimation() {
+  active.value = false
+}
+
+defineExpose({ startAnimation, stopAnimation })
+</script>
+
+<template>
+  <svg
+    viewBox="0 0 24 24"
+    :width="size"
+    :height="size"
+    fill="none"
+    stroke="currentColor"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    :class="['fvue-animated-icon', (playing || active) && 'fvue-animated-icon--playing']"
+    :role="label ? 'img' : undefined"
+    :aria-label="label"
+    :aria-hidden="label ? undefined : true"
+    @mouseenter="startAnimation"
+    @mouseleave="stopAnimation"
+  >
+      <path d="M7 10v12" />
+      <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z" />
+  </svg>
+</template>

@@ -1,0 +1,23 @@
+{
+  "name": "fvue-ui-lib",
+  "private": true,
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "workspaces": ["packages/*", "apps/*", "tools/*"],
+  "scripts": {
+    "build": "bun run --filter './packages/*' build",
+    "typecheck": "bun run --filter './packages/*' typecheck",
+    "test": "bun run --filter fvue-ui-lib test",
+    "test:visual": "bun run --filter fvue-docs test:visual",
+    "docs:build": "bun run --filter './apps/*' build",
+    "docs:preview": "bun run --filter fvue-docs preview",
+    "watch:snapshot": "bun run --filter fvue-watch snapshot",
+    "watch:compare": "bun run --filter fvue-watch compare",
+    "watch:matrix": "bun run --filter fvue-watch matrix",
+    "watch:check": "bun run --filter fvue-watch check"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.9.3"
+  }
+}

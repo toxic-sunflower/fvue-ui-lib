@@ -1,0 +1,52 @@
+{
+  "hash": "bf1a2d2e",
+  "configHash": "fa35c52b",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "6cfe732c",
+  "optimized": {
+    "vue": {
+      "src": "../../../../../node_modules/.bun/vue@3.5.44+1fb4c65d43e298b9/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "545b13c3",
+      "needsInterop": false
+    },
+    "vitepress > @vue/devtools-api": {
+      "src": "../../../../../node_modules/.bun/@vue+devtools-api@7.7.10/node_modules/@vue/devtools-api/dist/index.js",
+      "file": "vitepress___@vue_devtools-api.js",
+      "fileHash": "b10a2ec5",
+      "needsInterop": false
+    },
+    "vitepress > @vueuse/core": {
+      "src": "../../../../../node_modules/.bun/@vueuse+core@12.8.2+1fb4c65d43e298b9/node_modules/@vueuse/core/index.mjs",
+      "file": "vitepress___@vueuse_core.js",
+      "fileHash": "bde548b5",
+      "needsInterop": false
+    },
+    "clsx": {
+      "src": "../../../../../node_modules/.bun/clsx@2.1.1/node_modules/clsx/dist/clsx.mjs",
+      "file": "clsx.js",
+      "fileHash": "f62e0c87",
+      "needsInterop": false
+    },
+    "tailwind-merge": {
+      "src": "../../../../../node_modules/.bun/tailwind-merge@3.4.0/node_modules/tailwind-merge/dist/bundle-mjs.mjs",
+      "file": "tailwind-merge.js",
+      "fileHash": "3701034b",
+      "needsInterop": false
+    },
+    "reka-ui": {
+      "src": "../../../../../node_modules/.bun/reka-ui@2.11.0+ad96fd96b7c8b788/node_modules/reka-ui/dist/index.js",
+      "file": "reka-ui.js",
+      "fileHash": "2a721ecb",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-BOOBRD3S": {
+      "file": "chunk-BOOBRD3S.js"
+    },
+    "chunk-OYQD7GAK": {
+      "file": "chunk-OYQD7GAK.js"
+    }
+  }
+}

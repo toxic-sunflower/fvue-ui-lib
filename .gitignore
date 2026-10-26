@@ -1,0 +1,51 @@
+node_modules/
+dist/
+dist-ssr/
+.astro/
+.vite/
+.vitepress/dist/
+.vitepress/cache/
+.venv/
+*.tgz
+.DS_Store
+Thumbs.db
+Desktop.ini
+/tmp/
+
+# Logs
+*.log
+npm-debug.log*
+bun-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env (tokens only via shell, never commit)
+.env
+.env.*
+!.env.example
+
+# TypeScript / Vite
+*.tsbuildinfo
+*.local
+
+# Coverage
+coverage/
+
+# Playwright (keep baselines, ignore runs)
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+*-actual.png
+*-diff.png
+*-expected.png
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.zed/
+*.swp
+*.swo
+*~

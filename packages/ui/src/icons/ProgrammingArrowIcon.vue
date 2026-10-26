@@ -1,0 +1,47 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import type { IconSize } from '../types'
+
+const props = withDefaults(defineProps<{ size?: IconSize; filled?: boolean }>(), {
+  size: 24,
+  filled: false,
+})
+
+const VARIANTS = {"16":{"outlined":[{"d":"M12.667 10.667V4.333c0-.733-.6-1.333-1.333-1.333h-3"},{"d":"M10 1.333 8 3l2 1.667M3.334 6v4.667m.166-5a2.167 2.167 0 1 0 0-4.334 2.167 2.167 0 0 0 0 4.334m-.166 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4m9.333 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4"}],"filled":[{"d":"M3.834 10.74V5.26c.86-.22 1.5-.993 1.5-1.927 0-1.106-.894-2-2-2-1.107 0-2 .894-2 2 0 .934.64 1.707 1.5 1.927v5.473a1.997 1.997 0 0 0 .5 3.933c1.106 0 2-.893 2-2 0-.933-.64-1.706-1.5-1.926m9.333 0V4.335c0-1.014-.82-1.834-1.833-1.834H9.38l.94-.78a.505.505 0 0 0 .067-.706.506.506 0 0 0-.707-.067l-2 1.667a.508.508 0 0 0 0 .773l2 1.667a.506.506 0 0 0 .707-.067.5.5 0 0 0-.067-.707l-.94-.78h1.954c.46 0 .833.374.833.834v6.407c-.86.22-1.5.993-1.5 1.926 0 1.107.893 2 2 2s2-.893 2-2c0-.933-.64-1.707-1.5-1.926"}]},"24":{"outlined":[{"d":"M19 16V6.5c0-1.1-.9-2-2-2h-4.5","sw":1.5},{"d":"m15 2-3 2.5L15 7M5 9v7m.25-7.5a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5M5 22a3 3 0 1 0 0-6 3 3 0 0 0 0 6m14 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6","sw":1.5}],"filled":[{"d":"M5.75 16.11V7.89A2.98 2.98 0 0 0 8 5c0-1.66-1.34-3-3-3S2 3.34 2 5c0 1.4.96 2.56 2.25 2.89v8.21A2.996 2.996 0 0 0 5 22c1.66 0 3-1.34 3-3 0-1.4-.96-2.56-2.25-2.89m14 0V6.5c0-1.52-1.23-2.75-2.75-2.75h-2.93l1.41-1.17c.32-.27.36-.74.1-1.06a.76.76 0 0 0-1.06-.1l-3 2.5a.76.76 0 0 0 0 1.16l3 2.5c.14.12.31.17.48.17a.75.75 0 0 0 .48-1.33l-1.41-1.17H17c.69 0 1.25.56 1.25 1.25v9.61A2.98 2.98 0 0 0 16 19c0 1.66 1.34 3 3 3s3-1.34 3-3c0-1.4-.96-2.56-2.25-2.89"}]},"32":{"outlined":[{"d":"M25.333 21.333V8.667C25.333 7.2 24.133 6 22.667 6h-6","sw":2},{"d":"M20 2.667 16 6l4 3.333M6.667 12v9.333m.333-10a4.333 4.333 0 1 0 0-8.666 4.333 4.333 0 0 0 0 8.666m-.333 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8m18.666 0a4 4 0 1 0 0-8 4 4 0 0 0 0 8","sw":2}],"filled":[{"d":"M7.667 21.48V10.52c1.72-.44 3-1.987 3-3.853 0-2.214-1.787-4-4-4s-4 1.786-4 4a3.98 3.98 0 0 0 3 3.853v10.947c-1.72.453-3 2-3 3.866 0 2.214 1.786 4 4 4s4-1.786 4-4a3.98 3.98 0 0 0-3-3.853m18.666 0V8.669A3.665 3.665 0 0 0 22.667 5H18.76l1.88-1.56c.427-.36.48-.987.133-1.413a1.01 1.01 0 0 0-1.413-.134l-4 3.334A1 1 0 0 0 15 6c0 .307.133.573.36.773l4 3.334c.187.16.413.226.64.226a.999.999 0 0 0 .64-1.773L18.76 7h3.906c.92 0 1.667.747 1.667 1.667V21.48c-1.72.44-3 1.987-3 3.853 0 2.214 1.787 4 4 4s4-1.786 4-4a3.98 3.98 0 0 0-3-3.853"}]}} as Record<number, { outlined: { d: string; sw?: number; eo?: boolean }[]; filled?: { d: string; sw?: number; eo?: boolean }[] }>
+
+const current = computed(() => VARIANTS[props.size] ?? VARIANTS[24])
+const showFilled = computed(() => !!(props.filled && current.value?.filled))
+</script>
+
+<template>
+  <svg :viewBox="`0 0 ${size} ${size}`" :width="size" :height="size" fill="none" aria-hidden="true" class="fvue-icon">
+    <g :class="['fvue-icon__layer', showFilled && 'fvue-icon__layer--hidden']">
+      <path
+        v-for="p in current?.outlined ?? []"
+        :key="p.d"
+        :d="p.d"
+        :stroke="p.sw !== undefined ? 'currentColor' : undefined"
+        :stroke-width="p.sw"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        :fill="p.sw !== undefined ? undefined : 'currentColor'"
+        :fill-rule="p.eo ? 'evenodd' : undefined"
+        :clip-rule="p.eo ? 'evenodd' : undefined"
+      />
+    </g>
+    <g v-if="current?.filled" :class="['fvue-icon__layer', showFilled ? undefined : 'fvue-icon__layer--hidden']">
+      <path
+        v-for="p in current.filled ?? []"
+        :key="p.d"
+        :d="p.d"
+        :stroke="p.sw !== undefined ? 'currentColor' : undefined"
+        :stroke-width="p.sw"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        :fill="p.sw !== undefined ? undefined : 'currentColor'"
+        :fill-rule="p.eo ? 'evenodd' : undefined"
+        :clip-rule="p.eo ? 'evenodd' : undefined"
+      />
+    </g>
+  </svg>
+</template>

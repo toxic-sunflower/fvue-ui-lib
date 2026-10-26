@@ -1,0 +1,518 @@
+{
+  "version": "3.43.0",
+  "portBaseline": "3.43.0",
+  "done": 85,
+  "total": 85,
+  "rows": [
+    {
+      "original": "AiButton",
+      "port": "AiButton",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Button",
+      "port": "Button",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ButtonIconGroup",
+      "port": "ButtonIconGroup",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ButtonStack",
+      "port": "ButtonStack",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "FloatingActionButton",
+      "port": "FloatingActionButton",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "IconButton",
+      "port": "IconButton",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Link",
+      "port": "Link",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "SubscribeButton",
+      "port": "SubscribeButton",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "SwitchButton",
+      "port": "SwitchButton",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Autocomplete",
+      "port": "Autocomplete",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Checkbox",
+      "port": "Checkbox",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "DatePicker",
+      "port": "DatePicker",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "InlineEdit",
+      "port": "InlineEdit",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "PasswordField",
+      "port": "PasswordField",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "PhoneField",
+      "port": "PhoneField",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Radio",
+      "port": "Radio",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "RadioGroup",
+      "port": "RadioGroup",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "SearchField",
+      "port": "SearchField",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Select",
+      "port": "Select",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Slider",
+      "port": "Slider",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Switch",
+      "port": "Switch",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "SwitchField",
+      "port": "SwitchField",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "SwitchToggle",
+      "port": "SwitchToggle",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "TextArea",
+      "port": "TextArea",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "TextField",
+      "port": "TextField",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Dialog",
+      "port": "Dialog",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Drawer",
+      "port": "Drawer",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "DropdownMenu",
+      "port": "DropdownMenu",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Tooltip",
+      "port": "Tooltip",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "BottomNavigation",
+      "port": "BottomNavigation",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Breadcrumb",
+      "port": "Breadcrumb",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "MobileStepper",
+      "port": "MobileStepper",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "PageSelector",
+      "port": "PageSelector",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Pagination",
+      "port": "Pagination",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "SegmentedControl",
+      "port": "SegmentedControl",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Stepper",
+      "port": "Stepper",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Tabs",
+      "port": "Tabs",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Accordion",
+      "port": "Accordion",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "AnimatedNumber",
+      "port": "AnimatedNumber",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Chip",
+      "port": "Chip",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Count",
+      "port": "Count",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "CyclingText",
+      "port": "CyclingText",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Demographics",
+      "port": "Demographics",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Pill",
+      "port": "Pill",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "RatingSummary",
+      "port": "RatingSummary",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Table",
+      "port": "Table",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "TrendPill",
+      "port": "TrendPill",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "AiDisclosureBadge",
+      "port": "AiDisclosureBadge",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "AiDisclosureLabel",
+      "port": "AiDisclosureLabel",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Alert",
+      "port": "Alert",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Badge",
+      "port": "Badge",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Banner",
+      "port": "Banner",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "CriticalBanner",
+      "port": "CriticalBanner",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "EmptyState",
+      "port": "EmptyState",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "InfoBox",
+      "port": "InfoBox",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Loader",
+      "port": "Loader",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ProgressBar",
+      "port": "ProgressBar",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Skeleton",
+      "port": "Skeleton",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Snackbar",
+      "port": "Snackbar",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Toast",
+      "port": "Toast",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Card",
+      "port": "Card",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Divider",
+      "port": "Divider",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "AudioPlayer",
+      "port": "AudioPlayer",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "AudioRecordButton",
+      "port": "AudioRecordButton",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "AudioUpload",
+      "port": "AudioUpload",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "MediaStatusIndicator",
+      "port": "MediaStatusIndicator",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "VoiceNote",
+      "port": "VoiceNote",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Avatar",
+      "port": "Avatar",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ChatEmbed",
+      "port": "ChatEmbed",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ChatInput",
+      "port": "ChatInput",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ChatMessage",
+      "port": "ChatMessage",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "CreatorCard",
+      "port": "CreatorCard",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "CreatorCover",
+      "port": "CreatorCover",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "CreatorTile",
+      "port": "CreatorTile",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "FanFollowerCount",
+      "port": "FanFollowerCount",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "LiveStatus",
+      "port": "LiveStatus",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "OnlineBlinkingIcon",
+      "port": "OnlineBlinkingIcon",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ProfileOnlineStatus",
+      "port": "ProfileOnlineStatus",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ProfileStatus",
+      "port": "ProfileStatus",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "ReviewCard",
+      "port": "ReviewCard",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "UserDisplayName",
+      "port": "UserDisplayName",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "UserHandle",
+      "port": "UserHandle",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "UserItem",
+      "port": "UserItem",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "Chart",
+      "port": "ChartContainer",
+      "status": "done",
+      "lag": "3.43.0"
+    },
+    {
+      "original": "CountryFlag",
+      "port": "CountryFlag",
+      "status": "done",
+      "lag": "3.43.0"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<script setup lang="ts">
+import { computed } from 'vue'
+import type { IconSize } from '../types'
+
+const props = withDefaults(defineProps<{ size?: IconSize; filled?: boolean }>(), {
+  size: 24,
+  filled: false,
+})
+
+const VARIANTS = {"16":{"outlined":[{"d":"M8.25 8.62a2.58 2.58 0 0 1-2.58-2.58 2.58 2.58 0 0 1 2.58-2.58 2.58 2.58 0 0 1 2.58 2.58 2.58 2.58 0 0 1-2.58 2.58m0-4.153a1.58 1.58 0 1 0 1.58 1.58 1.58 1.58 0 0 0-1.58-1.58"},{"d":"m8.25 15.373-.26-.16c-.294-.18-7.167-4.5-5.814-10.486C2.916 1.467 5.756 0 8.25 0c2.486 0 5.333 1.46 6.073 4.72 1.36 6-5.74 10.447-5.813 10.487zm-5.1-10.42c-1.054 4.667 3.886 8.4 5.1 9.24 1.213-.833 6.16-4.573 5.1-9.24-.66-2.906-3.16-3.94-5.1-3.94s-4.44 1.027-5.1 3.94"}],"filled":[{"d":"M13.335 5.002c-1.313-5.78-9.866-5.78-11.173 0-1.293 5.7 5.587 9.953 5.587 9.953l.003-.002c.183-.113 6.88-4.242 5.583-9.951M9.83 6.208a2.08 2.08 0 1 1-4.16 0 2.08 2.08 0 0 1 4.16 0"}]},"24":{"outlined":[{"d":"M12.375 12.93c-2.13 0-3.87-1.73-3.87-3.87s1.73-3.87 3.87-3.87 3.87 1.73 3.87 3.87-1.73 3.87-3.87 3.87m0-6.23c-1.3 0-2.37 1.06-2.37 2.37s1.06 2.37 2.37 2.37 2.37-1.06 2.37-2.37-1.06-2.37-2.37-2.37"},{"d":"m12.374 23.06-.39-.24c-.44-.27-10.75-6.75-8.72-15.73C4.374 2.2 8.634 0 12.374 0c3.73 0 8 2.19 9.11 7.08 2.04 9-8.61 15.67-8.72 15.73zM4.724 7.43c-1.58 7 5.83 12.6 7.65 13.86 1.82-1.25 9.24-6.86 7.65-13.86-.99-4.36-4.74-5.91-7.65-5.91s-6.66 1.54-7.65 5.91"}],"filled":[{"d":"M20.003 7.503c-1.97-8.67-14.8-8.67-16.76 0-1.94 8.55 8.38 14.93 8.38 14.93l.006-.004c.274-.169 10.32-6.362 8.374-14.926m-5.26 1.81a3.12 3.12 0 1 1-6.24 0 3.12 3.12 0 0 1 6.24 0"}]},"32":{"outlined":[{"d":"M16.5 17.24a5.164 5.164 0 0 1-5.16-5.16 5.156 5.156 0 0 1 5.16-5.16 5.155 5.155 0 0 1 5.16 5.16 5.156 5.156 0 0 1-5.16 5.16m0-8.306a3.167 3.167 0 0 0-3.16 3.16 3.16 3.16 0 0 0 3.16 3.16 3.16 3.16 0 0 0 3.16-3.16 3.16 3.16 0 0 0-3.16-3.16"},{"d":"m16.5 30.747-.52-.32c-.587-.36-14.334-9-11.627-20.974C5.833 2.933 11.513 0 16.499 0c4.974 0 10.667 2.92 12.147 9.44 2.72 12-11.48 20.893-11.627 20.973zM6.3 9.907c-2.107 9.333 7.773 16.8 10.2 18.48 2.426-1.667 12.32-9.147 10.2-18.48-1.32-5.814-6.32-7.88-10.2-7.88S7.62 4.08 6.3 9.907"}],"filled":[{"d":"M26.67 10.003c-2.626-11.56-19.733-11.56-22.346 0-2.587 11.4 11.173 19.907 11.173 19.907l.008-.005c.365-.225 13.76-8.483 11.166-19.902m-7.013 2.413a4.16 4.16 0 1 1-8.32 0 4.16 4.16 0 0 1 8.32 0"}]}} as Record<number, { outlined: { d: string; sw?: number; eo?: boolean }[]; filled?: { d: string; sw?: number; eo?: boolean }[] }>
+
+const current = computed(() => VARIANTS[props.size] ?? VARIANTS[24])
+const showFilled = computed(() => !!(props.filled && current.value?.filled))
+</script>
+
+<template>
+  <svg :viewBox="`0 0 ${size} ${size}`" :width="size" :height="size" fill="none" aria-hidden="true" class="fvue-icon">
+    <g :class="['fvue-icon__layer', showFilled && 'fvue-icon__layer--hidden']">
+      <path
+        v-for="p in current?.outlined ?? []"
+        :key="p.d"
+        :d="p.d"
+        :stroke="p.sw !== undefined ? 'currentColor' : undefined"
+        :stroke-width="p.sw"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        :fill="p.sw !== undefined ? undefined : 'currentColor'"
+        :fill-rule="p.eo ? 'evenodd' : undefined"
+        :clip-rule="p.eo ? 'evenodd' : undefined"
+      />
+    </g>
+    <g v-if="current?.filled" :class="['fvue-icon__layer', showFilled ? undefined : 'fvue-icon__layer--hidden']">
+      <path
+        v-for="p in current.filled ?? []"
+        :key="p.d"
+        :d="p.d"
+        :stroke="p.sw !== undefined ? 'currentColor' : undefined"
+        :stroke-width="p.sw"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        :fill="p.sw !== undefined ? undefined : 'currentColor'"
+        :fill-rule="p.eo ? 'evenodd' : undefined"
+        :clip-rule="p.eo ? 'evenodd' : undefined"
+      />
+    </g>
+  </svg>
+</template>

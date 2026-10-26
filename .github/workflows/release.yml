@@ -1,0 +1,20 @@
+name: release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+  id-token: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install
+      - run: bun run build
+      - run: bun run test
+      - name: version matches tag
+        run: test "v$(bun -e 'console.log(require("./packages/ui/package.json").version)')" = "${{ github.ref_name }}"
+      - run: bun publish --access public --provenance
+        working-directory: packages/ui

@@ -1,0 +1,15 @@
+{
+  "name": "fvue-icon-sync",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "bun ./sync.mjs",
+    "sync:icons": "bun ./sync.mjs icons",
+    "sync:flags": "bun ./sync.mjs flags",
+    "sync:animated": "bun ./sync.mjs animated"
+  },
+  "dependencies": {
+    "typescript": "~5.9.3"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "fvue-docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bunx --bun vitepress dev",
+    "build": "bunx --bun vitepress build",
+    "preview": "bunx --bun vitepress preview",
+    "test:visual": "bunx --bun playwright test"
+  },
+  "dependencies": {
+    "fvue-ui-lib": "workspace:*",
+    "tailwindcss": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.3"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.44"
+  }
+}

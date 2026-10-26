@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "fvue-ui-lib/styles/components.css";
+@import "fvue-ui-lib/theme.css";
+@source "../../../packages/ui/src";
+
+.demo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.demo-dark {
+  background: #101014;
+  color-scheme: dark;
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px 0;
+}
