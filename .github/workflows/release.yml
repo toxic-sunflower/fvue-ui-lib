@@ -11,11 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
       - run: bun install
       - run: bun run build
       - run: bun run test
       - name: version matches tag
         working-directory: packages/ui
         run: test "v$(bun pm pkg get version | tr -d '"')" = "${{ github.ref_name }}"
-      - run: bun publish --access public --provenance
+      - run: npm publish --access public --provenance
         working-directory: packages/ui
