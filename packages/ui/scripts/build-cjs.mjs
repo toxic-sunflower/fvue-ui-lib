@@ -1,14 +1,14 @@
-import { copyFileSync, mkdirSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
+import { copyFileSync } from 'node:fs'
+import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+// The real CJS bundles are built by vite (LIB_FORMAT=cjs).
+// This only mirrors the ESM type declarations as .d.cts next to them.
 const here = dirname(fileURLToPath(import.meta.url))
 const root = resolve(here, '..')
 const entries = ['index', 'charts', 'date-picker', 'flags', 'animated-icons']
 
-mkdirSync(resolve(root, 'dist/cjs'), { recursive: true })
 for (const name of entries) {
-  copyFileSync(resolve(root, `dist/${name}.mjs`), resolve(root, `dist/cjs/${name}.cjs`))
   copyFileSync(resolve(root, `dist/${name}.d.ts`), resolve(root, `dist/cjs/${name}.d.cts`))
 }
-console.log('cjs stubs written')
+console.log('cjs type stubs written')

@@ -1,8 +1,16 @@
 {
   "name": "fvue-ui-lib",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Unofficial Vue 3 port of the Fanvue UI library (@fanvue/ui): same look, props and behavior for Vue apps. Not affiliated with Fanvue.",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toxic-sunflower/fvue-ui-lib.git"
+  },
+  "homepage": "https://github.com/toxic-sunflower/fvue-ui-lib#readme",
+  "bugs": {
+    "url": "https://github.com/toxic-sunflower/fvue-ui-lib/issues"
+  },
   "keywords": ["vue", "vue3", "ui", "components", "design-system", "tailwindcss", "reka-ui", "fanvue", "unofficial"],
   "type": "module",
   "sideEffects": ["**/*.css"],
@@ -36,9 +44,9 @@
     "./theme.css": "./src/theme.css",
     "./base.css": "./src/base.css"
   },
-  "files": ["dist", "src/theme.css", "src/base.css"],
+  "files": ["dist", "src/theme.css", "src/base.css", "README.md", "CHANGELOG.md", "LICENSE", "NOTICE"],
   "scripts": {
-    "build": "bunx --bun vite build && bun ./scripts/build-cjs.mjs",
+    "build": "bunx --bun vite build && LIB_FORMAT=cjs bunx --bun vite build && bun ./scripts/build-cjs.mjs",
     "sync:theme": "bun ./scripts/sync-theme.mjs",
     "typecheck": "bunx --bun vue-tsc --noEmit -p tsconfig.json",
     "test": "bunx --bun vitest run"
