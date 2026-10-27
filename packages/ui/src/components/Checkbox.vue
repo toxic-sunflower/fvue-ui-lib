@@ -22,7 +22,9 @@ function onUpdateModelValue(value: boolean | 'indeterminate') {
 
 const uid = useId()
 
-const labelId = computed(() => `${props.id ?? 'fvue-check'}-${uid}-label`)
+const inputId = computed(() => props.id ?? `fvue-check-${uid}`)
+
+const labelId = computed(() => `${inputId.value}-label`)
 
 const rootProps = computed(() => ({
   ...(props.modelValue !== undefined ? { modelValue: props.modelValue } : {}),
@@ -35,7 +37,7 @@ const rootProps = computed(() => ({
 <template>
   <div class="fvue-check-field">
     <CheckboxRoot
-      :id="id"
+      :id="inputId"
       class="fvue-checkbox"
       v-bind="rootProps"
       @update:model-value="onUpdateModelValue"
@@ -47,7 +49,7 @@ const rootProps = computed(() => ({
       </CheckboxIndicator>
     </CheckboxRoot>
     <div>
-      <label v-if="label" :id="labelId" :for="id" class="fvue-field__label">{{ label }}</label>
+      <label v-if="label" :id="labelId" :for="inputId" class="fvue-field__label">{{ label }}</label>
       <p v-if="helperText" class="fvue-field__helper">{{ helperText }}</p>
     </div>
   </div>

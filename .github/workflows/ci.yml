@@ -43,3 +43,9 @@ jobs:
       - run: bunx --bun playwright install chromium --with-deps
         working-directory: apps/docs
       - run: bun run test:visual
+      - uses: actions/upload-artifact@v5
+        if: failure()
+        with:
+          name: visual-diff
+          path: apps/docs/test-results/
+          retention-days: 7

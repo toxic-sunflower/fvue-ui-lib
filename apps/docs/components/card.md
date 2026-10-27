@@ -18,3 +18,15 @@ import { Button, Card, CardContent, CardDescription, CardFooter, CardHeader, Car
     </CardFooter>
   </Card>
 </div>
+
+## Slots
+
+`Card` also accepts `header`, `title`, `description` and `footer` slots.
+
+<div style="max-width: 360px;">
+  <Card>
+    <template #title>Insights</template>
+    <template #description>Last 30 days</template>
+    Revenue is up 12%.
+  </Card>
+</div>

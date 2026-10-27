@@ -54,7 +54,25 @@ describe('forms-2', () => {
     expect(w.text()).toContain('B')
   })
 
-  it('Slider renders thumb and label', () => {
+  it('Radio label works without explicit id', () => {
+    const w = mount(
+      defineComponent({
+        render() {
+          return h(RadioGroup, { defaultValue: 'a' }, {
+            default: () => [h(Radio, { value: 'a', label: 'A' }), h(Radio, { value: 'b', label: 'B' })],
+          })
+        },
+      }),
+    )
+    const labels = w.findAll('label')
+    const items = w.findAll('[role="radio"]')
+    // happy-dom does not implement label activation behavior, so only the
+    // association is asserted here; real browsers forward the click natively.
+    expect(labels[1].attributes('for')).toBeTruthy()
+    expect(labels[1].attributes('for')).toBe(items[1].attributes('id'))
+  })
+
+  it('Slider renders thumb and label', async () => {
     const w = mount(Slider, { props: { modelValue: [30], label: 'Volume' } })
     expect(w.text()).toContain('Volume')
     expect(w.find('.fvue-slider__thumb').exists()).toBe(true)
