@@ -1,8 +1,6 @@
-# fvue-ui — неофициальный Vue-порт `@fanvue/ui`
+# fvue-ui — unofficial Vue port of `@fanvue/ui`
 
 > Unofficial Vue 3 port. Not affiliated with Fanvue. Original: Apache-2.0 © Shift Holdings Ltd.
 
-Каркас Этапа 1: сборка, типы, субпути, токены, вотчер.
-
-- [Button](/components/button) — пример компонента (светлая/тёмная тема через `.dark`).
-- Тема (CSS-переменные) подключается из пакета: `fvue-ui-lib/theme.css` (вендор `@fanvue/ui/styles/theme.css`, `@fanvue/ui` потребителю не нужен).
+- [Button](/components/button) — sample component (light/dark themes via `.dark`).
+- Theme (CSS variables) ships with the package: `fvue-ui-lib/theme.css` (vendored from `@fanvue/ui/styles/theme.css`; consumers don't need `@fanvue/ui`).
