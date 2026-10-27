@@ -51,3 +51,9 @@ jobs:
           fc-cache -f
           fc-list | grep -i inter
       - run: bun run test:visual
+      - uses: actions/upload-artifact@v5
+        if: failure()
+        with:
+          name: visual-diff
+          path: apps/docs/test-results/
+          retention-days: 7
