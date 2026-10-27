@@ -5,6 +5,9 @@ export default defineConfig({
   snapshotPathTemplate: './visual/__snapshots__/{testFileName}/{arg}{ext}',
   use: {
     baseURL: 'http://localhost:4173',
+    // Deterministic rendering across machines: no scrollbar gutter shifting
+    // content width, no subpixel advance rounding differences between freetypes.
+    launchOptions: { args: ['--hide-scrollbars', '--disable-font-subpixel-positioning'] },
   },
   // Absorbs sub-pixel font antialiasing drift between machines (CI vs local).
   // Real regressions shift far more than 2% of pixels.
