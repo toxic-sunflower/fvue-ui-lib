@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+- Radio/Checkbox: label click works without an explicit `id` (auto-generated and linked).
+- Card: `title` slot renders as a styled heading; `description` slot verified styled.
+
 ## 0.1.2
 
 - Theme is vendored into the package: `theme.css`/`base.css` carry the real upstream content, so consumers no longer need `@fanvue/ui` installed (fixes `Can't resolve '@fanvue/ui/styles/theme.css'`). Resync with `bun run sync:theme` in `packages/ui`.

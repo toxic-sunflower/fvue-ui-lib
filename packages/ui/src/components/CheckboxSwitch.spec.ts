@@ -17,6 +17,16 @@ describe('Checkbox', () => {
     expect(w.emitted('update:modelValue')).toBeTruthy()
   })
 
+  it('associates label without explicit id', () => {
+    const w = mount(Checkbox, { props: { label: 'Accept', defaultValue: false } })
+    const label = w.find('label')
+    const box = w.find('[role="checkbox"]')
+    // happy-dom does not implement label activation behavior, so only the
+    // association is asserted here; real browsers forward the click natively.
+    expect(label.attributes('for')).toBeTruthy()
+    expect(label.attributes('for')).toBe(box.attributes('id'))
+  })
+
   it('respects disabled', () => {
     const w = mount(Checkbox, { props: { disabled: true } })
     expect((w.find('button').element as HTMLButtonElement).disabled).toBe(true)

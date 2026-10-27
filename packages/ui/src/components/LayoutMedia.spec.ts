@@ -19,6 +19,18 @@ describe('layout-media', () => {
     expect(mount(Divider).find('[data-orientation="horizontal"]').exists()).toBe(true)
   })
 
+  it('Card title and description slots are styled', () => {
+    const w = mount(Card, {
+      slots: { title: 'T', description: 'D', default: 'Body' },
+    })
+    const title = w.find('.fvue-card__title')
+    expect(title.exists()).toBe(true)
+    expect(title.text()).toBe('T')
+    const desc = w.find('.fvue-card__description')
+    expect(desc.exists()).toBe(true)
+    expect(desc.text()).toBe('D')
+  })
+
   it('AudioPlayer toggles and shows time', async () => {
     const w = mount(AudioPlayer, { props: { duration: 65, waveform: [0.2, 0.9] } })
     expect(w.text()).toContain('0:00 / 1:05')

@@ -5,7 +5,7 @@
   <div class="fvue-card">
     <div v-if="$slots.header || $slots.title" class="fvue-card__header">
       <slot name="header" />
-      <slot name="title" />
+      <h3 v-if="$slots.title" class="fvue-card__title"><slot name="title" /></h3>
     </div>
     <div v-if="$slots.description" class="fvue-card__description"><slot name="description" /></div>
     <div class="fvue-card__content"><slot /></div>
