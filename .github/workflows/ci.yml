@@ -42,4 +42,12 @@ jobs:
       - run: bun run docs:build
       - run: bunx --bun playwright install chromium --with-deps
         working-directory: apps/docs
+      # Screenshots are rendered with Inter; without it fallback fonts shift
+      # text metrics and baselines (generated with Inter) mismatch.
+      - name: install Inter font for stable screenshots
+        run: |
+          mkdir -p ~/.local/share/fonts
+          curl -sL -o ~/.local/share/fonts/Inter.ttf "https://github.com/google/fonts/raw/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf"
+          fc-cache -f
+          fc-list | grep -i inter
       - run: bun run test:visual
