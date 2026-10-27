@@ -3,6 +3,13 @@
 @import "fvue-ui-lib/theme.css";
 @source "../../../packages/ui/src";
 
+/* Pin docs prose/mono fonts so screenshots render identically everywhere.
+   Both families are installed in CI (see ci.yml) and must exist locally too. */
+:root {
+  --vp-font-family-base: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
 .demo-row {
   display: flex;
   flex-wrap: wrap;
