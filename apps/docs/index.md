@@ -5,4 +5,4 @@
 Каркас Этапа 1: сборка, типы, субпути, токены, вотчер.
 
 - [Button](/components/button) — пример компонента (светлая/тёмная тема через `.dark`).
-- Тема (CSS-переменные) подключается из пакета: `fvue-ui-lib/theme.css` (реэкспорт `@fanvue/ui/styles/theme.css`).
+- Тема (CSS-переменные) подключается из пакета: `fvue-ui-lib/theme.css` (вендор `@fanvue/ui/styles/theme.css`, `@fanvue/ui` потребителю не нужен).

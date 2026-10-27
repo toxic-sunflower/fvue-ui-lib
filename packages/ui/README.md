@@ -8,7 +8,7 @@ This package brings the same look, tokens, and dark mode to **Vue 3 + TypeScript
 Vite + Tailwind CSS v4** apps — embedded Fanvue Apps or standalone.
 
 - 85 components, 176 static icons, 69 animated icons, 265 country flags
-- Design tokens as a Tailwind v4 theme (re-exported from the original, not vendored)
+- Design tokens as a Tailwind v4 theme (vendored from the original, resynced by watcher)
 - Light/dark themes via a single `.dark` class
 - Accessible primitives via [Reka UI](https://reka-ui.com/) (the Vue counterpart of Radix UI)
 - Tree-shakeable named exports, same subpaths as the original
@@ -33,7 +33,7 @@ The library ships class names, not compiled CSS. Your Tailwind build produces th
 @import "tailwindcss";
 @source "../node_modules/fvue-ui-lib";
 @import "fvue-ui-lib/styles/components.css";
-@import "fvue-ui-lib/theme.css"; /* design tokens (variables + .dark), re-exported from @fanvue/ui */
+@import "fvue-ui-lib/theme.css"; /* design tokens (variables + .dark), vendored from @fanvue/ui */
 ```
 
 > Without the `@source` line Tailwind never sees the classes and everything renders unstyled.

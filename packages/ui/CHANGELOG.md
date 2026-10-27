@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Theme is vendored into the package: `theme.css`/`base.css` carry the real upstream content, so consumers no longer need `@fanvue/ui` installed (fixes `Can't resolve '@fanvue/ui/styles/theme.css'`). Resync with `bun run sync:theme` in `packages/ui`.
+
 ## 0.1.1
 
 - Real CJS bundles (`require()` works) instead of ESM copies.
