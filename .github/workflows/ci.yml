@@ -40,9 +40,20 @@ jobs:
       - run: bun install
       - run: bun run build
       - run: bun run docs:build
+      - name: dump card title markup (debug)
+        working-directory: apps/docs
+        run: |
+          bun run preview --port 4174 &
+          SRV=$!
+          sleep 8
+          curl -s http://localhost:4174/components/card.html -o /tmp/card.html
+          echo "--- h3 tags:"
+          grep -o '<h3[^>]*>' /tmp/card.html | head -n 5
+          echo "--- fvue-card__title count:"
+          grep -o 'fvue-card__title' /tmp/card.html | wc -l
+          kill $SRV
       - run: bunx --bun playwright install chromium --with-deps
         working-directory: apps/docs
-      - run: bun run test:visual
       - run: bun run test:visual
       - uses: actions/upload-artifact@v5
         if: failure()
