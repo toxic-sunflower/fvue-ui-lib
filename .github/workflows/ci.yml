@@ -42,15 +42,7 @@ jobs:
       - run: bun run docs:build
       - run: bunx --bun playwright install chromium --with-deps
         working-directory: apps/docs
-      # Screenshots are rendered with pinned fonts; without them fallback fonts shift
-      # text metrics and baselines (generated with the same files) mismatch.
-      - name: install pinned fonts for stable screenshots
-        run: |
-          mkdir -p ~/.local/share/fonts
-          curl -sL -o ~/.local/share/fonts/Inter.ttf "https://github.com/google/fonts/raw/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf"
-          curl -sL -o ~/.local/share/fonts/JetBrainsMono.ttf "https://github.com/google/fonts/raw/main/ofl/jetbrainsmono/JetBrainsMono%5Bwght%5D.ttf"
-          fc-cache -f
-          fc-list | grep -iE "inter|jetbrains"
+      - run: bun run test:visual
       - run: bun run test:visual
       - uses: actions/upload-artifact@v5
         if: failure()
