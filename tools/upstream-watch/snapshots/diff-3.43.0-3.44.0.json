@@ -1,0 +1,89 @@
+{
+  "from": "3.43.0",
+  "to": "3.44.0",
+  "addedExports": {
+    "index": [
+      "ChipNotificationSize"
+    ]
+  },
+  "removedExports": {},
+  "propChanges": [
+    {
+      "exportName": "index:Chip",
+      "added": [
+        "notificationSize"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:ChipProps",
+      "added": [
+        "notificationSize"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:ChipSize",
+      "added": [],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableMobileRow",
+      "added": [
+        "wrap"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableMobileRowProps",
+      "added": [
+        "wrap"
+      ],
+      "removed": [],
+      "changedType": []
+    }
+  ],
+  "addedTokens": [],
+  "removedTokens": [],
+  "changedTokens": [
+    {
+      "name": "--color-buttons-secondary-default",
+      "ctx": "dark",
+      "from": "var(--color-neutral-alphas-200)",
+      "to": "var(--color-neutral-alphas-50)"
+    },
+    {
+      "name": "--color-buttons-secondary-hover",
+      "ctx": "dark",
+      "from": "var(--color-neutral-alphas-300)",
+      "to": "var(--color-neutral-alphas-200)"
+    },
+    {
+      "name": "--color-buttons-chip-default",
+      "ctx": "dark",
+      "from": "var(--color-neutral-alphas-200)",
+      "to": "var(--color-neutral-alphas-100)"
+    },
+    {
+      "name": "--color-buttons-chip-hover",
+      "ctx": "dark",
+      "from": "var(--color-neutral-alphas-300)",
+      "to": "var(--color-neutral-alphas-200)"
+    }
+  ],
+  "addedIcons": [],
+  "removedIcons": [],
+  "addedFlags": [],
+  "removedFlags": [],
+  "subpathChanges": {
+    "added": [],
+    "removed": []
+  },
+  "breaking": [
+    "4 token value changes (visual review needed)"
+  ]
+}
