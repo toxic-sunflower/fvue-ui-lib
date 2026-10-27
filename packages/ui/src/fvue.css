@@ -1,4 +1,4 @@
-/* fvue-ui component styles. Theme variables come from ../theme.css (re-export of @fanvue/ui). */
+/* fvue-ui component styles. Theme variables come from ./theme.css (vendored from @fanvue/ui). */
 .fvue-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   font-family: Inter, system-ui, sans-serif; font-weight: 600;
