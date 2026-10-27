@@ -21,8 +21,7 @@ import { Button, Card, CardContent, CardDescription, CardFooter, CardHeader, Car
 
 ## Slots
 
-`Card` also accepts `header`, `title`, `description`, `content` (default) and `footer` slots.
-`title` renders as a styled heading, `description` as styled helper text — no `id` needed anywhere:
+`Card` also accepts `header`, `title`, `description` and `footer` slots.
 
 <div style="max-width: 360px;">
   <Card>
