@@ -1,0 +1,69 @@
+{
+  "from": "3.44.0",
+  "to": "3.45.0",
+  "addedExports": {},
+  "removedExports": {},
+  "propChanges": [
+    {
+      "exportName": "index:CreatorCard",
+      "added": [
+        "pill",
+        "verified",
+        "verifiedLabel",
+        "tagline",
+        "content",
+        "action"
+      ],
+      "removed": [
+        "description",
+        "actions"
+      ],
+      "changedType": [
+        {
+          "name": "name",
+          "from": "string",
+          "to": "React_2.ReactNode"
+        }
+      ]
+    },
+    {
+      "exportName": "index:CreatorCardProps",
+      "added": [
+        "pill",
+        "verified",
+        "verifiedLabel",
+        "tagline",
+        "content",
+        "action"
+      ],
+      "removed": [
+        "description",
+        "actions"
+      ],
+      "changedType": [
+        {
+          "name": "name",
+          "from": "string",
+          "to": "React_2.ReactNode"
+        }
+      ]
+    }
+  ],
+  "addedTokens": [],
+  "removedTokens": [],
+  "changedTokens": [],
+  "addedIcons": [],
+  "removedIcons": [],
+  "addedFlags": [],
+  "removedFlags": [],
+  "subpathChanges": {
+    "added": [],
+    "removed": []
+  },
+  "breaking": [
+    "removed props in index:CreatorCard: description, actions",
+    "changed prop types in index:CreatorCard: name",
+    "removed props in index:CreatorCardProps: description, actions",
+    "changed prop types in index:CreatorCardProps: name"
+  ]
+}
