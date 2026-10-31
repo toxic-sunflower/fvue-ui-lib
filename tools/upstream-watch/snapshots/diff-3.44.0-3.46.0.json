@@ -1,0 +1,135 @@
+{
+  "from": "3.44.0",
+  "to": "3.46.0",
+  "addedExports": {
+    "index": [
+      "BookmarkIcon",
+      "BookmarkIconProps",
+      "TableCardPagination",
+      "TableCardPaginationProps",
+      "TableMediaTile",
+      "TableMediaTileProps",
+      "TableToolbarAction",
+      "TableToolbarActionProps",
+      "TableToolbarButton",
+      "TableToolbarButtonProps",
+      "TableToolbarSearch",
+      "TableToolbarSearchProps"
+    ]
+  },
+  "removedExports": {
+    "index": [
+      "TablePagination",
+      "TablePaginationLayout",
+      "TablePaginationProps",
+      "TableRowsPerPageSelect",
+      "TableRowsPerPageSelectProps"
+    ]
+  },
+  "propChanges": [
+    {
+      "exportName": "index:CreatorCard",
+      "added": [
+        "pill",
+        "verified",
+        "verifiedLabel",
+        "tagline",
+        "content",
+        "action"
+      ],
+      "removed": [
+        "description",
+        "actions"
+      ],
+      "changedType": [
+        {
+          "name": "name",
+          "from": "string",
+          "to": "React_2.ReactNode"
+        }
+      ]
+    },
+    {
+      "exportName": "index:CreatorCardProps",
+      "added": [
+        "pill",
+        "verified",
+        "verifiedLabel",
+        "tagline",
+        "content",
+        "action"
+      ],
+      "removed": [
+        "description",
+        "actions"
+      ],
+      "changedType": [
+        {
+          "name": "name",
+          "from": "string",
+          "to": "React_2.ReactNode"
+        }
+      ]
+    },
+    {
+      "exportName": "index:TableCell",
+      "added": [
+        "nowrap"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableCellProps",
+      "added": [
+        "nowrap"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableMediaThumbnailSize",
+      "added": [],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableToolbar",
+      "added": [
+        "search"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableToolbarProps",
+      "added": [
+        "search"
+      ],
+      "removed": [],
+      "changedType": []
+    }
+  ],
+  "addedTokens": [
+    "--color-surface-table-row"
+  ],
+  "removedTokens": [],
+  "changedTokens": [],
+  "addedIcons": [
+    "BookmarkIcon"
+  ],
+  "removedIcons": [],
+  "addedFlags": [],
+  "removedFlags": [],
+  "subpathChanges": {
+    "added": [],
+    "removed": []
+  },
+  "breaking": [
+    "removed exports in index: TablePagination, TablePaginationLayout, TablePaginationProps, TableRowsPerPageSelect, TableRowsPerPageSelectProps",
+    "removed props in index:CreatorCard: description, actions",
+    "changed prop types in index:CreatorCard: name",
+    "removed props in index:CreatorCardProps: description, actions",
+    "changed prop types in index:CreatorCardProps: name"
+  ]
+}
