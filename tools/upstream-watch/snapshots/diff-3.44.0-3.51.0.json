@@ -1,0 +1,322 @@
+{
+  "from": "3.44.0",
+  "to": "3.51.0",
+  "addedExports": {
+    "index": [
+      "BookmarkIcon",
+      "BookmarkIconProps",
+      "DialogContentSize",
+      "DocumentIcon",
+      "DocumentIconProps",
+      "EmptyStateTitleAs",
+      "EpisodesIcon",
+      "EpisodesIconProps",
+      "MediaPlayChip",
+      "MediaPlayChipProps",
+      "ShortsIcon",
+      "ShortsIconProps",
+      "SkeletonRadius",
+      "SpinnerIconProps",
+      "TableCardPagination",
+      "TableCardPaginationProps",
+      "TableMediaTile",
+      "TableMediaTileProps",
+      "TableRowButton",
+      "TableRowButtonProps",
+      "TableToolbarAction",
+      "TableToolbarActionProps",
+      "TableToolbarButton",
+      "TableToolbarButtonProps",
+      "TableToolbarSearch",
+      "TableToolbarSearchProps",
+      "TableTruncatedText",
+      "TableTruncatedTextProps",
+      "TabsListSkeleton",
+      "TabsListSkeletonProps",
+      "UndoAlertPrompt",
+      "UndoAlertPromptProps",
+      "UndoAlertPromptType",
+      "UserItemPadding",
+      "formatPlayChipDuration"
+    ],
+    "charts": [
+      "ChartGrid",
+      "ChartGridProps"
+    ]
+  },
+  "removedExports": {
+    "index": [
+      "TablePagination",
+      "TablePaginationLayout",
+      "TablePaginationProps",
+      "TableRowsPerPageSelect",
+      "TableRowsPerPageSelectProps"
+    ]
+  },
+  "propChanges": [
+    {
+      "exportName": "index:BaseIconProps",
+      "added": [
+        "spin"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:CreatorCard",
+      "added": [
+        "pill",
+        "verified",
+        "verifiedLabel",
+        "tagline",
+        "content",
+        "action"
+      ],
+      "removed": [
+        "description",
+        "actions"
+      ],
+      "changedType": [
+        {
+          "name": "name",
+          "from": "string",
+          "to": "React_2.ReactNode"
+        }
+      ]
+    },
+    {
+      "exportName": "index:CreatorCardProps",
+      "added": [
+        "pill",
+        "verified",
+        "verifiedLabel",
+        "tagline",
+        "content",
+        "action"
+      ],
+      "removed": [
+        "description",
+        "actions"
+      ],
+      "changedType": [
+        {
+          "name": "name",
+          "from": "string",
+          "to": "React_2.ReactNode"
+        }
+      ]
+    },
+    {
+      "exportName": "index:DialogContent",
+      "added": [],
+      "removed": [],
+      "changedType": [
+        {
+          "name": "size",
+          "from": "\"sm\" | \"md\" | \"lg\"",
+          "to": "DialogContentSize"
+        }
+      ]
+    },
+    {
+      "exportName": "index:DialogContentProps",
+      "added": [],
+      "removed": [],
+      "changedType": [
+        {
+          "name": "size",
+          "from": "\"sm\" | \"md\" | \"lg\"",
+          "to": "DialogContentSize"
+        }
+      ]
+    },
+    {
+      "exportName": "index:DrawerVariant",
+      "added": [],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:DropdownMenuItem",
+      "added": [
+        "trailingAction"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:DropdownMenuItemProps",
+      "added": [
+        "trailingAction"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:EmptyState",
+      "added": [
+        "titleAs"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:EmptyStateProps",
+      "added": [
+        "titleAs"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:IconButtonVariant",
+      "added": [],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:LinkSize",
+      "added": [],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:LinkVariant",
+      "added": [],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:Skeleton",
+      "added": [
+        "radius"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:SkeletonProps",
+      "added": [
+        "radius"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:SpinnerIcon",
+      "added": [
+        "size"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableCell",
+      "added": [
+        "nowrap"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableCellProps",
+      "added": [
+        "nowrap"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableMediaThumbnailSize",
+      "added": [],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableToolbar",
+      "added": [
+        "search"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:TableToolbarProps",
+      "added": [
+        "search"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:UserItem",
+      "added": [
+        "padding"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "index:UserItemProps",
+      "added": [
+        "padding"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "charts:ChartCard",
+      "added": [
+        "fullHeight"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "charts:ChartCardProps",
+      "added": [
+        "fullHeight"
+      ],
+      "removed": [],
+      "changedType": []
+    },
+    {
+      "exportName": "animated-icons:AnimatedIconProps",
+      "added": [
+        "spin"
+      ],
+      "removed": [],
+      "changedType": []
+    }
+  ],
+  "addedTokens": [
+    "--color-surface-table-row",
+    "--typography-body-default-16px-regular-font-weight",
+    "--typography-body-small-14px-regular-font-weight",
+    "--typography-description-12px-regular-font-weight"
+  ],
+  "removedTokens": [],
+  "changedTokens": [],
+  "addedIcons": [
+    "BookmarkIcon",
+    "DocumentIcon",
+    "EpisodesIcon",
+    "ShortsIcon"
+  ],
+  "removedIcons": [],
+  "addedFlags": [],
+  "removedFlags": [],
+  "subpathChanges": {
+    "added": [],
+    "removed": []
+  },
+  "breaking": [
+    "removed exports in index: TablePagination, TablePaginationLayout, TablePaginationProps, TableRowsPerPageSelect, TableRowsPerPageSelectProps",
+    "removed props in index:CreatorCard: description, actions",
+    "changed prop types in index:CreatorCard: name",
+    "removed props in index:CreatorCardProps: description, actions",
+    "changed prop types in index:CreatorCardProps: name",
+    "changed prop types in index:DialogContent: size",
+    "changed prop types in index:DialogContentProps: size"
+  ]
+}
